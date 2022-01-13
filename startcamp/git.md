@@ -1,4 +1,16 @@
-git init
+관리 하고싶으면
+
+
+
+git init (작업폴더가 없다면 .git이 없다면)
+
+
+
+git config --global user.email
+
+git config --global user.name
+
+---
 
 
 
@@ -14,7 +26,7 @@ git commit
 
 
 
-git status
+git status (말그대로 상태)
 
 
 
@@ -40,3 +52,15 @@ i 로 입력 esc 로 복귀 그후 :(콜론)으로 동작
 writte, quit
 
 first commit
+
+이렇게 아니고 간단하게 하고 싶으면
+
+git commit -m 'first commit' 이런식으로 사용하면 됨
+
+
+
+
+
+
+
+vim
