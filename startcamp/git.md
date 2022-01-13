@@ -67,8 +67,30 @@ git commit -m 'first commit' 이런식으로 사용하면 됨
 
 
 
+remote 관련
+
+
+
+git remote add 이름
+
+이름이라는 이름을 가진 리모트 추가
+
+
+
+git remote -v 
+
+현재 등록된 리모트 정보
+
+
+
+git remote remove 이름
+
+존재하는 리모트 제거
 
 
 
 
-vim
+
+
+
+![image-20220113163759901](git.assets/image-20220113163759901.png)
