@@ -18,17 +18,25 @@ working directory -> staging area
 
 git add
 
+워킹 디렉토리 상태
+
+git status
+
 
 
 staging area -> commits
 
 git commit
 
+커밋츠의 상태
+
+git log
+
 
 
 git status (말그대로 상태)
 
-
+사
 
 (staging area에 유무 차이에 따른 색깔차이)
 
