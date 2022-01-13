@@ -7,3 +7,8 @@
 
 
 
+![git_sturct1](readme.assets/git_sturct1.png)
+
+
+
+![git_sturct2](readme.assets/git_sturct2.png)
