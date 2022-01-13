@@ -4,11 +4,7 @@
 
 1. [CLI사용하기](./startcamp/CLIgv.md)
 2. [마크다운사용](./startcamp/Markup.md)
+2. [git 기초](./startcamp/git.md)
 
 
 
-![git_sturct1](readme.assets/git_sturct1.png)
-
-
-
-![git_sturct2](readme.assets/git_sturct2.png)
