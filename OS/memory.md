@@ -18,5 +18,10 @@
 
 
 
+* LRU(Least Recently Used)알고리즘
 
+  가장 최신 사용된것을 우선순위
 
+* LFU(Least Frequently Used)알고리즘
+
+  가장 빈번히 사용된것을 우선순위
