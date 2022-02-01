@@ -189,11 +189,29 @@ OS 시스템구조 마지막 28.00분까지 들음
 
 ![image-20220129125234250](C:\Users\sw133\AppData\Roaming\Typora\typora-user-images\image-20220129125234250.png)
 
+우측은 기존의 DMA가 없는 방식, 메인메모리는 cpu 만 접근할 수 있었음
+
+좌측이 DMA를 넣어서 효율적으로 굴리는 방식, 컨트롤러도 메인 메모리에 접근하여 cpu 호출횟수를 줄임
+
+
+
 
 
 ### 입출력
 
 ![image-20220129191804505](C:\Users\sw133\AppData\Roaming\Typora\typora-user-images\image-20220129191804505.png)
+
+좌측은 메모리 따로 I/O장치 따로, 메모리접근 기계어 따로, I/O수행 기계어 따로
+
+우측은 메모리 접근기계어 안에 I/O수행 기계어 포함(접근 주소를 연장하는개념)
+
+
+
+### 캐싱
+
+![image-20220201140015061](C:\Users\sw133\AppData\Roaming\Typora\typora-user-images\image-20220201140015061.png)
+
+
 
 
 
