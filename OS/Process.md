@@ -427,7 +427,7 @@ thread 가 동료 thread와 공유하는 부분(= task)
 
 * exit - 프로세스가 마지막 명령을 수행한 후 OS에게 이를 알려줌
 
-  * via **wait**자식이 부모에게 output data를 보냄
+  * via **wait** 자식이 부모에게 output data를 보냄
   * 프로세스의 각종 자원들이 OS에게 반납됨
 
 * abort - 부모 프로세스가 자식의 수행을 종료시킴
@@ -457,7 +457,9 @@ thread 가 동료 thread와 공유하는 부분(= task)
 
 ![image-20220202151902663](C:\Users\sw133\AppData\Roaming\Typora\typora-user-images\image-20220202151902663.png)    
 
+밑에 execlp 라는 부분은 특정 프로그램으로 덮어 쓴다는 얘기다 즉 execlp 밑에 어떤 명령어가 있던지간에
 
+실행이 되지않는다
 
 
 
