@@ -33,6 +33,9 @@
 > >>Communication links
 > >>
 > >>bandwidth
+> >>
+> >>물리적인 연결
+> >
 
 
 
@@ -84,6 +87,8 @@ HFC : hyvrid fiber coax
 여러 network를 묶어주는 중앙선 ?
 
 제공받는 서비스는 share access network이다
+
+shared access 라서 대역폭을 나눠쓰기 때문에 up to(최대 속도)라고 표현
 
 ![image](.\Chapter1_Roadmap\home_net)
 
