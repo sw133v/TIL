@@ -332,7 +332,27 @@ physical 계층 프로토콜 : bits를 보냄
 
   스팸이나 DDos어택에의해 오염된 컴퓨터들의 집합
 
+* Dos
 
+  ![image](.\Chapter1_Roadmap\dos)
+
+  1. select target
+  2. break into hosts around the network(see botnet)
+  3. send packets to target from compromised hosts
+
+* sniffing
+
+  > 주위 네트워크의 패킷들의 정보를 탈취하는 공격법
+
+  ![image](.\Chapter1_Roadmap\sniff)
+
+  * broadcast media(shared ethernet, wireless)에서 발생함
+
+* spoofing
+
+  > 남인척 하는 공격법
+
+  ![image](.\Chapter1_Roadmap\sfooping)
 
 
 
@@ -393,8 +413,6 @@ loss가 발생하면 메시지를 정상적으로 보내기위해 재전송 해�
 
 * instantaneous :
 * average : 
-
-
 
 
 
