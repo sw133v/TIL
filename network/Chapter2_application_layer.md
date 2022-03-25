@@ -77,6 +77,10 @@ host name								path name
 
 Non-persisternt HTTP (옛방식)
 
+![image](.\Chapter2_application_layer.asset\RTT)
+
+Round Trip Time(RTT)
+
 요청에 대한 결과물만 주고 연결을 끉음
 
 persistent HTTP(현대)
@@ -84,6 +88,28 @@ persistent HTTP(현대)
 요청에 대한 결과물을 주고 대기(연결 유지) 
 
 
+
+![image](.\Chapter2_application_layer.asset\http_request_message)
+
+![image](.\Chapter2_application_layer.asset\http_request_message_format)
+
+
+
+![image](.\Chapter2_application_layer.asset\http_response_message)
+
+![image](.\Chapter2_application_layer.asset\http_status)
+
+
+
+
+
+
+
+![image](.\Chapter2_application_layer.asset\uploading_form_input)
+
+![image](.\Chapter2_application_layer.asset\http_method_types)
+
+head에게 url요청에 의한 object는 보내지말라는 의미(아마 통신이 되는지 확인용 메서드인듯?)
 
 
 
