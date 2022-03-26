@@ -182,7 +182,7 @@ telnet
 
 ![pull_push](Chapter2_application_layer.asset\pull_push)
 
-#### POP3 protocol
+##### POP3 protocol
 
 ![POP3_protocol](Chapter2_application_layer.asset\POP3_protocol)
 
@@ -192,7 +192,7 @@ telnet
 
 
 
-#### IMAP
+##### IMAP
 
 > POP3을 보완하고자 나옴
 
@@ -201,6 +201,8 @@ pop방식이 로커(컴퓨터)에 저장되는 방식이라면
 IMAP방식은 서버에 저장 -> 서버메일박스에서 들고옴
 
 
+
+여기까지는 C-S 형태
 
 
 
@@ -350,7 +352,38 @@ out-of-date 정보를 배제하기 위해 TTL(expire되면 해당 정보를 버�
 
 ![DNS_message_str](Chapter2_application_layer.asset\DNS_message_str)
 
+##### records
+
+![DNS_records](Chapter2_application_layer.asset\DNS_records)
+
+#### 요약
+
+![DNS_Summerize](Chapter2_application_layer.asset\DNS_Summerize)
+
+
+
 
 
 ### P2P: peer to peer
+
+![p2p](Chapter2_application_layer.asset\p2p)
+
+장점 
+
+* 확장성(scalability)
+* 
+
+
+
+사용 예시
+
+* file distruibution (ex: 토렌트)
+* streaming
+* Voip(ex: skype)
+
+
+
+C-S 와의 차이점
+
+![p2p_upload](Chapter2_application_layer.asset\p2p_upload)
 
