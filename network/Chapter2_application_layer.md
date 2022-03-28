@@ -190,15 +190,19 @@ telnet
 
 ![pop3_more](Chapter2_application_layer.asset\pop3_more)
 
-
-
 ##### IMAP
 
 > POP3을 보완하고자 나옴
 
 pop방식이 로커(컴퓨터)에 저장되는 방식이라면
 
+pop 방식에는 delete는 서버메일박스에 bob이 받으면 삭제
+
+keep은 bob이 받아도 유지
+
 IMAP방식은 서버에 저장 -> 서버메일박스에서 들고옴
+
+동기화됨
 
 
 
