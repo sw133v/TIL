@@ -185,6 +185,63 @@ vc방식의 예시
 ### 라우팅 프로토콜
 
 > control plane에 관련된 프로토콜
+>
+> 라우팅 알고리즘과 그것을 필요로하는 네트워크 정보를 주고받는것을 목적으로함
+>
+> 라우팅 알고리즘이 필요로하는 정보를 모으기위해 존재
+
+Graph abstraction
+
+> graph: G = (N, E)
+>
+> N = set of routers = {1,2,3,4,5,6....}
+>
+> E = set of links = {(1,3),(1,4).....}
+
+대역폭은 높을수록 적은코스트로
+
+congestion이나 delay는 고코스트로 측정
+
+라우팅 알고리즘
+
+> 최소비용으로 경로를 만들기위한 목적
+
+* global : 모든 링크를 알고있는 알고리즘
+
+  link state 알고리즘이라고도 함
+
+  * Dijkstra 알고리즘
+  * 
+
+* decentralized : 지역적인 정보만앎 -> 이웃 라우터 정도와 비용정도만 앎
+
+  대신 서로의 라우터 끼리 대화(거리 비용을 서로 공유시도)를 함
+
+  distance vector 알고리즘이라고도 함
+
+  * 
+
+
+
+static - 링크 코스트가 고정적
+
+
+
+dynamic - 링크 코스트가 가변적
+
+
+
+#### 실제 라우팅 프로토콜 알고리즘
+
+**Intra-ASes**
+
+* RIP: ROuting Information Protocol
+* OSPF:Open Shortest Path First
+* IGRP:Interior Gateway Routing Protocol
+
+
+
+
 
 ### IP프로토콜
 
@@ -269,15 +326,110 @@ CIDR notation : a.b.c.d / x
 
 > 말 그대로 고정된 IP주소를 사용하는것 ex 회사나 연구실에서 사용하는 컴퓨터 -> ip주소가 바뀔일이 드뭄
 >
-> 해당 ip를 사용하는 host가 종료하면 그것을 회수해서 다른 host에게 쥐어줌 -> 동시사용이 아니라면 더 많은 host를 수용가능 주소의 활용도가 높음
+> 해당 ip를 사용하는 host가 종료하면 그것을 회수해서 다른 host에게 쥐어줌(주소의 재사용) -> 동시사용이 아니라면 더 많은 host를 수용가능 주소의 활용도가 높음
+
+overview
+
+* DHCP discover msg[opt]
+* DHCP offer msg[opt]
+* DHCP request
+* DHCP ack
+
+ip할당 제외하고도
+
+first-hop 라우터를 알려줌
 
 
 
-### ICMP 프로토콜
+**hierarchical addressing**
+
+
+
+**Longest prefix matching**
+
+
+
+**NAT:network address translation**
+
+공유기 처럼 한 ip를 사용하여 subnet을 구성하는것 사설 ip라고도 표현함
+
+![image-20220413060045555](Chapter4_Network_layer.asset\image-20220413060045555.png)
+
+실제로 NAT라우터가  할당 받은 ip는 10.0.0.4이고 이것을 오른쪽과 같이 사용을 하지만 밖에서 보는 ip는 10.0.0.4이다
+
+16-bit port-num field 이기에 6만여개의 LAN-side 주소를 만들어줄 수 있음
+
+발생할 수 있는 문제점
+
+* server을 둘 수 있는가? - 보여지는 곳에 server가 있어야하는데 nat라우터 서브넷 안에 있으면 클라이언트가 server에 request함에 문제가 발생(즉 클라이언트가 server의 위치를 몰라서 contact를 할 수 없음)
+
+  * 이를 해결하기위한 방법
+
+    * 수동적으로 static하게 포워딩 하는 하는방법(port를 서버에 함께주면서 request를 하는?)
+
+    * 이것을 자동적으로 해주는 upnp(universal plug and play) IGD(internet gateway device) Protocol 
+
+      public ip주소를 기억, port를 맵핑하며(add/remove)
+
+
+
+
+
+### ICMP:internet control message protocol
 
 > 에러 및 시그널링 관련 프로토콜 즉 라우팅 프로토콜과 IP프로토콜은 라우터-라우터, 라우터-호스트 간의 데이터 전송에 관련된 프로토콜
 
-00000000 00000000 00000000 00000000
+![image-20220413064106029](\Chapter4_Network_layer.asset\image-20220413064106029.png)
+
+ICMP가 IP보다 위에 있음 -> 인캡슐레이션 할때 ICMP가 먼저 함
+
+
+
+
+
+### IPv6
+
+> 2^32 개의 주소를 가질수 있는 IPv4가 점점 주소가 고갈되감에 CIDR, DHCP, NAT를 개념을 점점 도입하다가 결국에 수용이 불가능 하기때문에 새로운 모델을 만듦
+>
+> 2^128개의 주소를 가질수 있음
+
+40 byte의 고정적인 헤더를 사용함으로 프로세싱 속도를 빠르게 만듦
+
+but optinoal header를 추가로 달면서 
+
+40바이트 고정적인 헤더안에 NH(next header)를 넣어줌
+
+마지막 NH에는 UDP/TCP인지의 값이 저장됨
+
+데이터그램이 너무 크면 드랍시켜서 전송을 포기함
+
+그래서 소스에다가 프래그먼트해서 보내게끔 만듦
+
+![image-20220413071231065](\Chapter4_Network_layer.asset\image-20220413071231065.png)
+
+priority 와 flow Label가 QoS(quality of service)를 위한 헤더
+
+
+
+IPv4와의 차이점
+
+checksum(최신의 장비들이 거의 bit오류가 없다는것을 가정) 과 options헤더가 없음(보다 빠른 프로세싱을 위해 가변적인 포맷대신 고정적인 크기의 포맷을 사용)대신에 Next Header 필드를 사용.
+
+ICMPv6를 사용
+
+#### IPv4 -> IPv6
+
+IPv6 장비들은 IPv4장비들의 데이터 포맷(헤더)을 이용및 이해가 가능하지만 반대의경우x
+
+그래서 터널링이라는 개념이 필요
+
+IPv4 페이로드에 IPv6의 데이터를 저장
+
+![image-20220413072231065](Chapter4_Network_layer.asset\image-20220413072231065.png)
+
+밑이 실제 형태,
+
+
 
 
 
