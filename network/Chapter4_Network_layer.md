@@ -184,6 +184,10 @@ vc방식의 예시
 
 ### 라우팅 프로토콜
 
+![image-20220413211634056](Chapter4_Network_layer.asset\image-20220413211634056.png)
+
+
+
 > control plane에 관련된 프로토콜
 >
 > 라우팅 알고리즘과 그것을 필요로하는 네트워크 정보를 주고받는것을 목적으로함
@@ -233,13 +237,29 @@ dynamic - 링크 코스트가 가변적
 
 #### 실제 라우팅 프로토콜 알고리즘
 
+
+
 **Intra-ASes**
 
-* RIP: ROuting Information Protocol
+* RIP: Routing Information Protocol
+  * 가장 기초적인 인트라 as라우팅 프로토콜
+  * UDP사용
+
 * OSPF:Open Shortest Path First
+  * 다잌스트라 알고리즘을 사용
+
 * IGRP:Interior Gateway Routing Protocol
 
+**inter-ASes**
 
+* BGP : Border Gateway Protocol
+  * eBGP : 외부 AS들에게서 reachability를 알아온다
+  * iBGP : 내부 라우터들에게 reachability를 전달
+  * BGP Message
+    * OPEN
+    * UPDATE
+    * KEEP ALIVE
+    * NOTIFICATION
 
 
 
