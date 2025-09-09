@@ -1,10 +1,10 @@
 ## DeadLock
 
-![image-20220219151537171](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219151537171.png)
+![image-20220219151537171](.\DeadLock\image-20220219151537171.png)
 
-![image-20220219151958191](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219151958191.png)
+![image-20220219151958191](.\DeadLock\image-20220219151958191.png)
 
-#### **데드락의 발생조건**
+### **데드락의 발생조건**
 
 > 밑에 모든 조건을 만족해야함
 
@@ -26,7 +26,7 @@
 
   
 
-#### **데드락 처리방법**
+### **데드락 처리방법**
 
 * Deadlock Prevention
 
@@ -92,7 +92,7 @@
 
   ex) banker's 알고리즘
 
-![image-20220219170024473](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219170024473.png)
+![image-20220219170024473](.\DeadLock\image-20220219170024473.png)
 
 banker's 알고리즘은 safe state를 유지하기 위해  
 
@@ -108,11 +108,11 @@ banker's 알고리즘은 safe state를 유지하기 위해
 
     * 자원당 인스턴스가 하나인경우 그래프를 통해서
 
-      ![image-20220219183748003](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219183748003.png)
+      ![image-20220219183748003](.\DeadLock\image-20220219183748003.png)
 
     * 자원당 인스턴스가 여러개면 banker's 알고리즘 처럼
 
-      ![image-20220219184123300](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219184123300.png)
+      ![image-20220219184123300](.\DeadLock\image-20220219184123300.png)
 
       자원을 요구하면 계산할 필요 없이 그냥 주고
 
@@ -147,9 +147,9 @@ banker's 알고리즘은 safe state를 유지하기 위해
 
 
 
-### Resource-Allocation Graph (자원 할당 그래프)
+#### Resource-Allocation Graph (자원 할당 그래프)
 
- ![image-20220219154343585](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219154343585.png)
+ ![image-20220219154343585](.\DeadLock\image-20220219154343585.png)
 
 사각형 - 자원
 
@@ -157,7 +157,7 @@ banker's 알고리즘은 safe state를 유지하기 위해
 
 
 
-![image-20220219161957627](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219161957627.png)
+![image-20220219161957627](.\DeadLock\image-20220219161957627.png)
 
 실선 - 자원을 선점하고 있다는 개념
 
@@ -175,7 +175,7 @@ P->R : p가 R을 요청했다는 개념
 
 avoidance는 2번 그림에서 P2에게 R2를 주지않게끔 하는것
 
-![image-20220219170628392](C:\Users\sw133\ssafy7\TIL\OS\DeadLock\image-20220219170628392.png)
+![image-20220219170628392](.\DeadLock\image-20220219170628392.png)
 
   
 
