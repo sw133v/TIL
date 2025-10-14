@@ -1,36 +1,50 @@
 # Soc(System on a Chip) 개념
-## 1. 회로에 대한 기본 개념
+## 1. Chip이란
+- 반도체 웨이퍼에서 잘려나온 작은 실리콘 조각을 의미
+    - 패키징 하면 chip
+    - 패키징 안하면 die
+- 이 안에 **집적 회로**(**IC**:Integrated Circuit)을 담고 있어 반도체 소자 하나로도 불림.
+### 1. 정의
+> 수많은 트랜지스터, 저항, 배선등을 미세공정으로 형성해 **특정한 전자 기능**을 수행하는 실리콘 단위 소자
+### 2. 예시
+- CPU
+- GPU
+- Memory
+- ㆍㆍㆍ
+## 2. Soc 기본 개념
 ### 1.기본 개념
 > 하나의 칩에 구동 가능한 **시스템**이 **내장**되어 있음을 말함
->> Processor, DSP, Analog core, ROM, RAM, Controller, Peripheral 등
-
-## 2. 장단점
+>> ex : Processor, DSP, Analog core, ROM, RAM, Controller, Peripheral 등
+## 3. 장단점
 ### 1. 장점
 * 고성능, 저전력, 안정성
 * 시스템 개발 기간 및 노력의 단축
 * 조립의 용이성
 * 제품의 폼팩터가 작아짐
 * 가격 경쟁력
-
 ### 2. 단점
 * 다양한 기능을 집적하므로 개발 기간이 김
     * Intellectual Property(IP)나 Platform 사용
 * 설계 검증 시간이 증가
     * 전문 검증 tool 사용 및 소프트웨어와의 통합 검증
-    >Universal Verification Methodology(UVM)과 같은 프레임워크
+    *  Universal Verification Methodology(UVM)과 같은 프레임워크
 
-## 3.종류
-### 1. Application Processor (AP)
-> 
+## 3.관련 용어
+![image](Soc개념.asset/soc.png)
+![image](Soc개념.asset/sip.png)
+### 1. System on Chip(SoC)
+> **하나의 칩**에 **여러 기능**이 들어간 형태
 
 ### 2. System in Package(SiP)
->
+> 여러개의 **칩**을 **하나의 패키지**에 들어간 형태
 
-### 3. Package on Package(PoP)
->
+### 3. Silicon In Package(SIP)
+> 여러개의 **다이**을 **하나의 패키지**에 **적층한** 형태
 
-### 4. Silicon In Package(SIP)
->
+### 4. Package on Package(PoP)
+> 패키지들을 **적층한** 형태
+
+### 5. 레지스터 전송 수준(RTL : Register Trasfer Level)
 
 ## 4. 개발 기법
 ### 1. Platform
@@ -121,3 +135,5 @@
 12. HDL
 13. Layout
 > 여러 기업에서 만든 버스들이 있고 근래에 주로 쓰이고 있는 ARM사의 AMBA를 주로 채택
+
+
