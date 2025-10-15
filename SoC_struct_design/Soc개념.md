@@ -120,6 +120,10 @@
 ## 6. SoC 개발 과정
 ![image](Soc개념.asset/soc_develop_flow.png)
 ![image](Soc개념.asset/soc_develop_flow2.png)
+
+## 7. 이슈
+![image](./Soc개념.asset/오류유발자들1.png)
+![image](./Soc개념.asset/오류예시.png)
 ## n. 용어 
 1. Processor
 2. DSP
